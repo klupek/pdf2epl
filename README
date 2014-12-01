@@ -1,3 +1,9 @@
-What does it do: converts VERY SIMPLE pdf files into EPL format for Zebra label printers.
-Status: works for me (+hardcoded printer and paper parameters)
+pdf2epl:
+What does it do: converts VERY SIMPLE pdf files into EPL format for Zebra label printers. Text handling is messy and probably won't work.
+Status: works for me (+hardcoded printer and paper parameters) (+messy code)
 Planned: bilevel image support.
+
+pdf2eplimage:
+What does it do: converts pdf to EPL commands with inline image printing. Uses ImageMagick to convert pdf into bilevel pbm file.
+Status: works just fine.
+

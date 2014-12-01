@@ -388,15 +388,15 @@ class MyReceiver
 		footer = []
 		footer <<  "P1,1\n"
 		(header + 
-		@texts.map { |text|
-			pos = text[:realpos]
-			font, font_vscale, font_hscale = select_best_font_for_text(text)
-			fix_text_object_position(text, font, font_vscale, font_hscale, labelwidth_dots, labelheight_dots)
+#		@texts.map { |text|
+#			pos = text[:realpos]
+#			font, font_vscale, font_hscale = select_best_font_for_text(text)
+#			fix_text_object_position(text, font, font_vscale, font_hscale, labelwidth_dots, labelheight_dots)
 			#font_hscale = font_vscale # 1-6, 8
 			# font_vscale = 1 # 1-9
-			escaped_text = text[:text].gsub(/\\/,'\\\\').gsub(/([^\\])"/,'\1\\"').encode('cp1250')
-			sprintf 'A%d,%d,%d,%d,%d,%d,N,"%s"', pos[:position][0], pos[:position][1], rotates[text[:rotate]], font, font_hscale, font_vscale, escaped_text
-		} + 
+#			escaped_text = text[:text].gsub(/\\/,'\\\\').gsub(/([^\\])"/,'\1\\"').encode('cp1250')
+#			sprintf 'A%d,%d,%d,%d,%d,%d,N,"%s"', pos[:position][0], pos[:position][1], rotates[text[:rotate]], font, font_hscale, font_vscale, escaped_text
+#		} + 
 		@rectangles.map { |r|
 			rp = r[:realpos]
 			sprintf 'LO%d,%d,%d,%d', rp[:start][0], rp[:start][1], rp[:width], rp[:height]
